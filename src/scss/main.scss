@@ -29,11 +29,11 @@ header {
   & h1 {
      text-align: center;
      font-family: 'Stalinist One', cursive;
-     padding-top: 50px;
-     font-size: 90px;
+     padding-top: 60px;
+     font-size: 60px;
      font-weight: 700;
      color: #9B9B9B;
-     -webkit-text-stroke: 1px #585958;
+     -webkit-text-stroke: 2px #585958;
  }
 }
 
@@ -64,19 +64,14 @@ h1, h3 {
   margin-top: 0;
 }
 
-h1 {
-  color: #d11d05;
-  margin-bottom: 20px;
-}
-
 h3 {
   margin-bottom: 20px;
   color: white;
 }
 
 button {
-  background-color: #d11d05;
-  color: white;
+  background-color: #1d1075;
+  color: #1ab1a5;
   border: 1px solid #d11d05;
   padding: 6px 8px;
   font-size: 16px;

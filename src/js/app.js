@@ -40,13 +40,14 @@ $(() => {
     $wellDone.addClass('hidden');
     $gameOver.addClass('hidden');
     $choice1.prop('disabled', false);
+    shuffle(questionBank);
 
   }
 
   function showQuestion() {
     questionObject = questionBank[questionIndex];
 
-    if (questionIndex === questionBank.length){
+    if (questionIndex === 15){
       $instructions.addClass('hidden');
       $gameOver.addClass('hidden');
       $gameBoard.addClass('hidden');
@@ -86,10 +87,10 @@ $(() => {
 
   }
 
+
   function helperOne (){
     $phoneFriend.removeClass('hidden');
     $gameBoard.addClass('hidden');
-
 
   }
   function mrMeeseeks(){
@@ -98,17 +99,20 @@ $(() => {
     $gameBoard.removeClass('hidden');
     alert(correctAnswer);
     $choice1.prop('disabled', true);
-
-
   }
+
+
+
 // click start button - starts new game
   $startButton.on('click', startGame);
 // when one of the choice buttons is clicked - check if button containing correct answer is clicked
   $buttons.on('click', checkButtons);
 // when helper1 button is clicked - run Mr Meeseeks
   $choice1.on('click', helperOne);
-
+// if can do button is clicked - run mr meeseeks function and find out the answer
   $meeseseeksButton.on('click', mrMeeseeks);
+// restarts the game and shuffles the questions
+  $choice2.on('click', helperTwo);
   $resetButton.on('click', restartGame);
 
 

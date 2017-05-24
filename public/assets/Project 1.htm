@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<!-- saved from url=(0022)http://localhost:7000/ -->
+<!-- saved from url=(0022)http://localhost:7001/ -->
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   
   <title>Project 1</title>
   <script src="./Project 1_files/jquery.min.js"></script>
+  <script src="./Project 1_files/questions.js" charset="utf-8"></script>
   <script src="./Project 1_files/app.js" charset="utf-8"></script>
   <link href="./Project 1_files/css" rel="stylesheet">
   <link rel="stylesheet" href="./Project 1_files/main.css">
@@ -13,38 +14,73 @@
 //]]></script><script async="" src="./Project 1_files/browser-sync-client.js"></script>
 
   <header>
-    <h1>Federa </h1>
+    <h1>Federation Quiz </h1>
   </header>
   <main>
-      <div id="instructions">
-        <h3>How to play</h3>
-        <p>
-          High Score: <span class="high-score">0</span></p>
+      <div id="start" class="hidden">
+        <h3>Instructions</h3>
+        <p>Welcome A-holes to the galactic quiz game
+          answer 15 questions right you get to live and you gain 3000 Flurbos.
+          Answer wrong and you will cease to exist,
+
+        </p>
         <button class="start-button">New Game</button>
       </div>
 
-      <div id="game-board" class="hidden">
-        <div id="current-q">
+      <div id="game-board" class="">
 
-        </div>
+        <p class="question-header"><span class="currentQ">What cereal is so good, children cut open a Leprechaun to eat it out of his internal organs?</span></p>
+
         <div class="master">
-          <button class="option1"></button>
-          <button class="option2"></button>
-          <button class="option3"></button>
-          <button class="option4"></button>
+          <button class="answer option1">A: Kellogs Crack Flakes</button>
+          <button class="answer option2">B: Strawberry Sniggles</button>
+          <button class="answer option3">C: Coco Pops</button>
+          <button class="answer option4">D: Beatawhix</button>
+        </div>
+        <div class="helper">
+          <button class="helper choice1" disabled=""></button>
+          <button class="helper choice2"></button>
+          <button class="helper choice3"></button>
         </div>
         <p>Score: <span class="score">0</span></p>
       </div>
 
+
       <div id="game-over" class="hidden">
-        <h3 id="result"></h3>
+        <h3 class="result">GAME OVER LOSER </h3>
         <p>Your score is: <span class="score">0</span></p>
-        <button>New Game</button>
+        <button class="reset-button">New Game</button>
+        <p>Dick Score: <span class="high-score">0</span></p>
+      </div>
+
+      <div id="well-done" class="hidden">
+        <h3 class="result"> CONGRATS </h3>
+        <p>Your score is: <span class="score">0</span></p>
+        <button class="reset-button">New Game</button>
+        <p>Shit Score: <span class="high-score">0</span></p>
+      </div>
+
+      <div id="meeseeks-box" class="hidden">
+        <img class="can-do" src="./Project 1_files/giphy.gif">
+        <button class="meeseseeksButton">CAN DO</button>
         <p>High Score: <span class="high-score">0</span></p>
       </div>
+
+      <div id="fifty-fifty" class="hidden">
+        <p>Narrowed it down for you Morty?</p>
+        <button class="reset-button">New Game</button>
+        <p>High Score: <span class="high-score">0</span></p>
+      </div>
+
+      <div id="council" class="hidden">
+        <p>Council of ricks decide...</p>
+        <button class="reset-button">New Game</button>
+        <p>High Score: <span class="high-score">0</span></p>
+      </div>
+
     </main>
     <footer>
-      <p>RICK AND MORTY and all related characters and elements are trademarks of Adult Swim and © 2013 Cartoon Network </p>
+      <p>RICK AND MORTY and all related characters and elements are trademarks of Adult Swim and © 2013 Cartoon Network <br> please don't sue me!</p>
     </footer>
   
 

@@ -1,6 +1,6 @@
 
-const questionBank = [
-  
+const questions = [
+
   // 1
   {
     question: 'What relationship is Rick to Morty?',
@@ -11,7 +11,9 @@ const questionBank = [
       'D: Grandfather'
     ],
     correctIndex: 3,
+    fiftyfifty: [3, 1],
     score: 200
+
   },
   // 2
   {
@@ -23,6 +25,7 @@ const questionBank = [
       'D: SOS-3.14159265359...'
     ],
     correctIndex: 0,
+    fiftyfifty: [0, 2],
     score: 200
   },
   // 3
@@ -35,6 +38,7 @@ const questionBank = [
       'D: Squantchy and Birdperson'
     ],
     correctIndex: 3,
+    fiftyfifty: [0, 3],
     score: 200
   },
   // 4
@@ -47,6 +51,7 @@ const questionBank = [
       'D: Mrs Pancakes'
     ],
     correctIndex: 1,
+    fiftyfifty: [1, 2],
     score: 200
   },
   {
@@ -58,6 +63,7 @@ const questionBank = [
       'D: Buy my stuff please... please?'
     ],
     correctIndex: 1,
+    fiftyfifty: [1, 3],
     score: 200
   },
   {
@@ -69,6 +75,7 @@ const questionBank = [
       'D: four'
     ],
     correctIndex: 0,
+    fiftyfifty: [0, 1],
     score: 200
   },
   {
@@ -80,6 +87,7 @@ const questionBank = [
       'D: Sleepy Gary'
     ],
     correctIndex: 2,
+    fiftyfifty: [2, 3],
     score: 200
   },
   {
@@ -91,6 +99,7 @@ const questionBank = [
       'D: Tic Tacs'
     ],
     correctIndex: 3,
+    fiftyfifty: [0, 3],
     score: 200
   },
   {
@@ -102,6 +111,7 @@ const questionBank = [
       'D: ..But it was a particularly intense game of chess'
     ],
     correctIndex: 2,
+    fiftyfifty: [1,2],
     score: 200
   },
   {
@@ -113,6 +123,7 @@ const questionBank = [
       'D: Kalaxian crystals'
     ],
     correctIndex: 0,
+    fiftyfifty: [0, 3],
     score: 200
   },
   {
@@ -124,6 +135,7 @@ const questionBank = [
       'D: Scary Terry Jnr'
     ],
     correctIndex: 1,
+    fiftyfifty: [1,2],
     score: 200
   },
   {
@@ -135,6 +147,7 @@ const questionBank = [
       'D: Asssss! Tastes bad'
     ],
     correctIndex: 3,
+    fiftyfifty: [3, 0],
     score: 200
   },
   {
@@ -146,6 +159,7 @@ const questionBank = [
       'D: Because it is needed to shave away the Plubus, as there are several hizards'
     ],
     correctIndex: 2,
+    fiftyfifty: [2, 3],
     score: 200
   },
   {
@@ -157,6 +171,7 @@ const questionBank = [
       'D: 8'
     ],
     correctIndex: 3,
+    fiftyfifty: [1, 3],
     score: 200
   },
   {
@@ -168,7 +183,45 @@ const questionBank = [
       'D: Steve'
     ],
     correctIndex: 2,
+    fiftyfifty: [2, 0],
+    score: 200
+  },
+  {
+    question: 'What cereal is so good, children cut open a Leprechaun to eat it out of his internal organs?',
+    answers: [
+      'A: Kellogs Crack Flakes',
+      'B: Strawberry Sniggles',
+      'C: Coco Pops',
+      'D: Beatawhix'
+    ],
+    correctIndex: 1,
+    fiftyfifty: [2, 0],
     score: 200
   }
 
 ];
+
+
+function shuffle(questionBank) {
+  var currentIndex = questionBank.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = questionBank[currentIndex];
+    questionBank[currentIndex] = questionBank[randomIndex];
+    questionBank[randomIndex] = temporaryValue;
+  }
+  console.log('questions loaded');
+  return questionBank;
+
+}
+
+// Used like so
+
+const questionBank = shuffle(questions);
