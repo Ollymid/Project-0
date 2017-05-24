@@ -10,9 +10,10 @@
 
 
 body {
+  height: 900px;
   font-family: arial;
-  background-image: url('../assets/space1.jpg');
-  background-size: auto;
+  background-image: url('../assets/space2.jpg');
+  background-size: cover;
   background-position: center;
 }
 
@@ -28,7 +29,7 @@ header {
   & h1 {
      text-align: center;
      font-family: 'Stalinist One', cursive;
-     padding-top: 10px;
+     padding-top: 50px;
      font-size: 90px;
      font-weight: 700;
      color: #9B9B9B;
@@ -36,33 +37,27 @@ header {
  }
 }
 
-
-
-
-
-
-.master {
-    button {
-    width: 30%;
-    height: 50px;
-    margin: 5px;
-    float:left;
-    display: inline-block;
-  }
-}
-
 button {
-  // font-family: Arial;
+  width: 30%;
+  height: 50px;
+  margin: 5px;
+  float:left;
+  display: inline-block;
+  border-radius: 15px;
 }
+
 
 main {
   background-color: black;
-  border-radius: 10px;
+  border-radius: 15px;
+  border: 5px solid aqua;
   width: 80%;
+  height: 65%;
   max-width: 900px;
   padding: 50px;
   margin: 50px auto;
   text-align: center;
+  overflow: hidden;
 }
 
 h1, h3 {
@@ -89,18 +84,18 @@ button {
   cursor: pointer;
   width: 100%;
   margin: 20px 0;
-}
 
-.start-button {
-  background-color: #d11d05;
-  color: #b000b5;
-  border: 1px solid #d11d05;
-  padding: 6px 8px;
-  font-size: 16px;
-  font-weight: bold;
-  cursor: pointer;
-  width: 50%;
-  margin: 20px 0;
+  &.start-button {
+    background-color: #d11d05;
+    color: #b000b5;
+    border: 1px solid #d11d05;
+    padding: 6px 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 50%;
+    margin: 20px 0;
+  }
 }
 
 button:hover {
@@ -114,6 +109,26 @@ button:focus {
 
 p {
   color: white;
+}
+.question-header {
+    font-size: 30px;
+  }
+
+
+button {
+  &.answer {
+    width: calc(50% - 3px);
+    &:nth-child(odd) {
+      margin-right: 6px;
+    }
+  }
+  &.helper {
+    width: calc(33.33% - 4px);
+    &:not(:last-of-type) {
+      margin-right: 6px;
+    height: 50px;
+    }
+  }
 }
 
 
@@ -133,7 +148,9 @@ p {
 
 footer {
   text-align: center;
+  height: 40px;
   color: white;
   background-color: black;
   width: 100%;
+
 }

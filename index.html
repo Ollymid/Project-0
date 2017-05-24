@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Project 1</title>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="public/js/app.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css?family=Stalinist+One" rel="stylesheet">
   <link rel="stylesheet" href="public/css/main.css">
@@ -13,7 +13,7 @@
     <h1>Federation Quiz </h1>
   </header>
   <main>
-      <div id="instructions">
+      <div id ="start">
         <h3>Instructions</h3>
         <p>Welcome A-holes to the galactic quiz game
           answer 15 questions right you get to live and you gain 3000 Flurbos.
@@ -25,16 +25,22 @@
 
       <div id="game-board" class="hidden">
 
-        <p><span class="currentQ"></span></p>
+        <p class="question-header"><span class="currentQ"></span></p>
 
         <div class="master">
-          <button class="answer option1"></button>
-          <button class="answer option2"></button>
-          <button class="answer option3"></button>
-          <button class="answer option4"></button>
+          <button class="answer option1"> </button>
+          <button class="answer option2"> </button>
+          <button class="answer option3"> </button>
+          <button class="answer option4"> </button>
+        </div>
+        <div class="helper">
+          <button class="helper meeseseeksBox"></button>
+          <button class="helper fifty-fifty"></button>
+          <button class="helper council"></button>
         </div>
         <p>Score: <span class="score">0</span></p>
       </div>
+
 
       <div id="game-over" class="hidden">
         <h3 class="result"></h3>
@@ -42,15 +48,35 @@
         <button class="reset-button">New Game</button>
         <p>High Score: <span class="high-score">0</span></p>
       </div>
+
       <div id="well-done" class="hidden">
-        <h3 class="result"> CONGRATS M'FUCKER</h3>
+        <h3 class="result"> CONGRATS </h3>
         <p>Your score is: <span class="score">0</span></p>
         <button class="reset-button">New Game</button>
         <p>High Score: <span class="high-score">0</span></p>
       </div>
+
+      <div id ="meeseeks-box" class="hidden">
+        <p>CAN DO</p>
+        <button class="reset-button">New Game</button>
+        <p>High Score: <span class="high-score">0</span></p>
+      </div>
+
+      <div id ="fifty-fifty" class="hidden">
+        <p>Narrowed it down for you Morty?</p>
+        <button class="reset-button">New Game</button>
+        <p>High Score: <span class="high-score">0</span></p>
+      </div>
+
+      <div id ="council" class="hidden">
+        <p>CAN DO</p>
+        <button class="reset-button">New Game</button>
+        <p>High Score: <span class="high-score">0</span></p>
+      </div>
+
     </main>
     <footer>
-      <p>RICK AND MORTY and all related characters and elements are trademarks of Adult Swim and © 2013 Cartoon Network </p>
+      <p>RICK AND MORTY and all related characters and elements are trademarks of Adult Swim and © 2013 Cartoon Network <br> please don't sue me!</p>
     </footer>
   </body>
 </html>
