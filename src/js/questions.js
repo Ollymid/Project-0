@@ -156,7 +156,7 @@ const questions = [
       'A: It is needed to repurpose the Schleem',
       'B: It is required to smooth out the Dinglebob ',
       'C: Because the Fleeb has all of the Fleeb juice',
-      'D: Because it is needed to shave away the Plubus, as there are several hizards'
+      'D: Because it is needed to shave away the Plubus'
     ],
     correctIndex: 2,
     fiftyfifty: [2, 3],
@@ -195,9 +195,22 @@ const questions = [
       'D: Beatawhix'
     ],
     correctIndex: 1,
-    fiftyfifty: [2, 0],
+    fiftyfifty: [1, 0],
+    score: 200
+  },
+  {
+    question: 'What did Jerry attempt to use as a weapon at Birdperson\'s wedding?',
+    answers: [
+      'A: Meeseeks box',
+      'B: Confetti Cannon',
+      'C: XP20 Prosthetic penis',
+      'D: A bucket of worms'
+    ],
+    correctIndex: 1,
+    fiftyfifty: [1, 3],
     score: 200
   }
+
 
 ];
 

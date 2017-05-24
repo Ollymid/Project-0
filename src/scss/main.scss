@@ -41,7 +41,7 @@ button {
   width: 30%;
   height: 50px;
   margin: 5px;
-  float:left;
+  // float:left;
   display: inline-block;
   border-radius: 15px;
 }
@@ -115,10 +115,12 @@ button {
     width: calc(50% - 3px);
     &:nth-child(odd) {
       margin-right: 6px;
+      float:left;
     }
   }
   &.helper {
     width: calc(33.33% - 4px);
+    float:left;
     &:not(:last-of-type) {
       margin-right: 6px;
     height: 100px;
