@@ -29,6 +29,7 @@ $(() => {
   const $buttons = $('.answer');
   const $meeseseeksButton = $('.meeseseeksButton');
   const $dumbDown = $('.jerry');
+  const $audienceReturn = $('.collectionofdouches');
   let questionIndex = 0;
   const rightIndex = 0;
 
@@ -39,6 +40,7 @@ $(() => {
     $gameBoard.removeClass('hidden');
     $choice1.prop('disabled', false);
     $choice2.prop('disabled', false);
+    $choice3.prop('disabled', false);
     showQuestion();
   }
 
@@ -48,6 +50,7 @@ $(() => {
     $gameOver.addClass('hidden');
     $choice1.prop('disabled', false);
     $choice2.prop('disabled', false);
+    $choice3.prop('disabled', false);
     showQuestion();
     shuffle(questionBank);
 
@@ -183,6 +186,11 @@ $(() => {
 
   }
 
+  function returnToGame () {
+    $askAudience.addClass('hidden');
+    $gameBoard.removeClass('hidden');
+    $choice3.prop('disabled', true);
+  }
 
 
   // click start button - starts new game
@@ -193,15 +201,18 @@ $(() => {
   // when helper1 button(phone a friend) is clicked - run Mr Meeseeks
 
   $choice1.on('click', helperOne);
-  // if can do button is clicked - run mr meeseeks function and find out the answer
+  // if can do button is clicked - run mr meeseeks function and find out the answer + return to game screen
   $meeseseeksButton.on('click', mrMeeseeks);
 
   //if helper2 button(50:50) is clicked run fiftyfifty function
   $choice2.on('click', helperTwo);
   // if fifty fifty button is clicked - run check fifty fifty
   $dumbDown.on('click', checkFiftyFifty);
+  // click of helper three runs ask the audience percentages function
 
   $choice3.on('click', helperThree);
+  // click of auidencereturn button takes user back to game
+  $audienceReturn.on('click', returnToGame);
 
   // restarts the game and shuffles the questions
   $resetButton.on('click', restartGame);

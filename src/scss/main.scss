@@ -12,7 +12,7 @@
 body {
   height: 900px;
   font-family: arial;
-  background-image: url('../assets/space2.jpg');
+  background-image: url('../assets/spacea.jpg');
   background-size: cover;
   background-position: center;
 }
@@ -29,8 +29,10 @@ header {
   & h1 {
      text-align: center;
      font-family: 'Stalinist One', cursive;
-     padding-top: 60px;
-     font-size: 60px;
+     margin: 0 auto;
+     width: 90%;
+     padding-top: 25px;
+     font-size: 70px;
      font-weight: 700;
      color: #9B9B9B;
      -webkit-text-stroke: 2px #585958;
@@ -41,7 +43,6 @@ button {
   width: 30%;
   height: 50px;
   margin: 5px;
-  // float:left;
   display: inline-block;
   border-radius: 15px;
 }
@@ -52,12 +53,25 @@ main {
   border-radius: 15px;
   border: 5px solid aqua;
   width: 80%;
-  height: 65%;
+  height: 80%;
   max-width: 900px;
   padding: 50px;
   margin: 50px auto;
   text-align: center;
   overflow: hidden;
+}
+
+div#start {
+  background-color: #9B9B9B;
+  background-image: url('../assets/ricksphere.jpeg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+
+}
+div#game-board {
+  padding-top: 100px;
 }
 
 h1, h3 {
@@ -67,15 +81,39 @@ h1, h3 {
 h3 {
   margin-bottom: 20px;
   color: white;
-  &.welcome{
-    font-size: 50px;
+    &.welcome{
+      font-family: 'Eater', cursive;
+      font-size: 75px;
+      width: 90%;
+      margin: 0 auto;
+      color: #29e0f3;
+      -webkit-text-stroke: 2px #bada55;
+    }
+}
+
+p {
+  color: white;
+
+  &.question-header {
+      font-size: 30px;
+    }
+  &.intro {
+    width: 80%;
+    color: #00ff00;
+    font-family: 'VT323', monospace;
+    margin: 0 auto;
+    padding-top: 45px;
+    font-size: 22px;
+  }
+  span.orange {
+    color: orange;
   }
 }
 
 button {
-  background-color: #1d1075;
-  color: #1ab1a5;
-  border: 1px solid #d11d05;
+  background-color: red;
+  color: blue;
+  border: 1px solid green;
   padding: 6px 8px;
   font-size: 16px;
   font-weight: bold;
@@ -83,40 +121,29 @@ button {
   width: 100%;
   margin: 20px 0;
 
-  &.start-button {
-    background-color: #d11d05;
-    color: #b000b5;
-    border: 1px solid #d11d05;
-    padding: 6px 8px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    width: 50%;
-    margin: 20px 0;
+  &.answer {
+    background-color: #1ab1a5;
+    color: #a55;
+    border: 1px solid #9155ed;
   }
-}
 
-button:hover {
-  background-color: #b000b5;
-  color: yellow;
-}
-
-button:focus {
-  outline: none;
-}
-
-p {
-  color: white;
-  
-  &.question-header {
-      font-size: 30px;
-    }
-}
-
-
-
-
-button {
+  &.collectionofdouches {
+    width: 30%;
+  }
+  &.start-button {
+    background-color: rgb(72, 72, 72);
+    color: #41d;
+    border: 3px solid #d11d05;
+    background-image: url('../assets/eyesopen.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding: 6px 8px;
+    cursor: pointer;
+    height: 150px;
+    width: 20%;
+    margin: 5px 0;
+  }
   &.answer {
     width: calc(50% - 3px);
     &:nth-child(odd) {
@@ -127,15 +154,60 @@ button {
   &.helper {
     width: calc(33.33% - 4px);
     float:left;
+
     &:not(:last-of-type) {
       margin-right: 6px;
-    height: 100px;
+      height: 100px;
     }
-  &.choice3 {
-    height:100px;
-  }
+    &.choice1 {
+      background-color: #feeb1e;
+      border: 6px solid #1d1075;
+      background-image: url('../assets/meeseeksbox.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    &.choice2{
+      background-color: #feeb1e;
+      border: 6px solid #1d1075;
+      background-image: url('../assets/jerry.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    &.choice3 {
+      height:100px;
+      background-color: #feeb1e;
+      border: 6px solid #1d1075;
+      background-image: url('../assets/rickcouncil1.png');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
   }
 }
+
+button:hover {
+  color: black;
+  font-size: 19px;
+  &.start-button {
+    border: 5px solid #bada55;
+  }
+  &.answer {
+    background-color: #d3f3c8;
+    color: #d11d05;
+  }
+  &.helper {
+    background-color: #23742D;
+    border-color: #1d1075;
+  }
+}
+
+button:focus {
+  outline: none;
+}
+
+
 
 
 .high-score, .score {
@@ -146,11 +218,16 @@ button {
 img#audience {
   max-height: 200px;
   width: auto;
+}
+
+img.image1 {
+  max-height: 75px;
 
 }
+
 .graph {
   width: 200px;
-  height: 200px;
+  height: 250px;
   border: 1px solid black;
   box-sizing: border-box;
   position: relative;
