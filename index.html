@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Project 1</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="public/js/questions.js" charset="utf-8"></script>
+  <script src="public/js/questioncollection.js" charset="utf-8"></script>
   <script src="public/js/app.js" charset="utf-8"></script>
   <link href="https://fonts.googleapis.com/css?family=Stalinist+One" rel="stylesheet">
   <link rel="stylesheet" href="public/css/main.css">
@@ -15,7 +15,7 @@
   </header>
   <main>
       <div id ="start">
-        <h3>Instructions</h3>
+        <h3 class="welcome">Instructions</h3>
         <p>Welcome A-holes to the galactic quiz game
           answer 15 questions right you get to live and you gain 3000 Flurbos.
           Answer wrong and you will cease to exist,
@@ -58,22 +58,42 @@
       </div>
 
       <div id ="meeseeks-box" class="hidden">
+
         <img class ="can-do" src="https://media.giphy.com/media/DgLsbUL7SG3kI/giphy.gif">
         <button class="meeseseeksButton">CAN DO</button>
-        <p>High Score: <span class="high-score">0</span></p>
+        <p>High Score: <span class="score">0</span></p>
       </div>
 
       <div id ="fifty-fifty" class="hidden">
-        <p>Narrowed it down for you Morty?</p>
+        <p>You really twisted my arm on this on Jerry, narrowed it down enough for you?</p>
         <button class="jerry" id="choice1"> </button>
         <button class="jerry" id="choice2"> </button>
-        <p>High Score: <span class="high-score">0</span></p>
+        <p>High Score: <span class="score">0</span></p>
       </div>
 
       <div id ="council" class="hidden">
-        <p>Council of ricks decide...</p>
-        <button class="reset-button">New Game</button>
-        <p>High Score: <span class="high-score">0</span></p>
+        <h3 class="councilofjerks"> Ask the Ricks </h3>
+        <img id="audience" src="src/assets/councilofricks.jpg" alt="council of ricks">
+        <div class="graph">
+          <ul class="options">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+            <li>D</li>
+          </ul>
+          <ul class="results">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <button class="collectionofdouches"> Return to Question</button>
+        <p>Score: <span class="score">0</span></p>
       </div>
 
     </main>

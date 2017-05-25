@@ -12,6 +12,7 @@ const questions = [
     ],
     correctIndex: 3,
     fiftyfifty: [3, 1],
+    fiftyIndex: 0,
     score: 200
 
   },
@@ -26,9 +27,10 @@ const questions = [
     ],
     correctIndex: 0,
     fiftyfifty: [0, 2],
+    fiftyIndex: 0,
     score: 200
   },
-  // 3
+   // 3
   {
     question: 'Who are Rick\'s closest friends and fellow bandates of The Flesh Curtains?',
     answers: [
@@ -39,6 +41,7 @@ const questions = [
     ],
     correctIndex: 3,
     fiftyfifty: [0, 3],
+    fiftyIndex: 1,
     score: 200
   },
   // 4
@@ -52,8 +55,10 @@ const questions = [
     ],
     correctIndex: 1,
     fiftyfifty: [1, 2],
+    fiftyIndex: 0,
     score: 200
   },
+  //5
   {
     question: 'What is the slogan of Jerry\'s apple ad campaign that won him an Appley award',
     answers: [
@@ -64,8 +69,10 @@ const questions = [
     ],
     correctIndex: 1,
     fiftyfifty: [1, 3],
+    fiftyIndex: 0,
     score: 200
   },
+  //6
   {
     question: 'How many arms does a Gazorpian have?',
     answers: [
@@ -75,9 +82,11 @@ const questions = [
       'D: four'
     ],
     correctIndex: 0,
-    fiftyfifty: [0, 1],
+    fiftyfifty: [1, 0],
+    fiftyIndex: 1,
     score: 200
   },
+  //7
   {
     question: 'Which of these characters is not an alien parasite?',
     answers: [
@@ -88,8 +97,10 @@ const questions = [
     ],
     correctIndex: 2,
     fiftyfifty: [2, 3],
+    fiftyIndex: 0,
     score: 200
   },
+  // 8
   {
     question: 'What non-weapon does Rick use to make purgers drop their weapons? ',
     answers: [
@@ -100,8 +111,10 @@ const questions = [
     ],
     correctIndex: 3,
     fiftyfifty: [0, 3],
+    fiftyIndex: 1,
     score: 200
   },
+  // 9
   {
     question: 'Complete the quote from Morty Jnr: \'there was violence, and threats of poison gas..\' ',
     answers: [
@@ -112,8 +125,10 @@ const questions = [
     ],
     correctIndex: 2,
     fiftyfifty: [1,2],
+    fiftyIndex: 1,
     score: 200
   },
+  // 10
   {
     question: 'What powers the miniverse?',
     answers: [
@@ -124,8 +139,10 @@ const questions = [
     ],
     correctIndex: 0,
     fiftyfifty: [0, 3],
+    fiftyIndex: 0,
     score: 200
   },
+  // 11
   {
     question: 'What is the name of Scary Terry\'s child?',
     answers: [
@@ -136,8 +153,10 @@ const questions = [
     ],
     correctIndex: 1,
     fiftyfifty: [1,2],
+    fiftyIndex: 0,
     score: 200
   },
+  //12
   {
     question: 'Which of these is NOT a Rick catch-phrase?',
     answers: [
@@ -148,8 +167,10 @@ const questions = [
     ],
     correctIndex: 3,
     fiftyfifty: [3, 0],
+    fiftyIndex: 0,
     score: 200
   },
+  //13
   {
     question: 'When making a Plumbus, why is it important that the Fleeb is rubbed?',
     answers: [
@@ -160,8 +181,10 @@ const questions = [
     ],
     correctIndex: 2,
     fiftyfifty: [2, 3],
+    fiftyIndex: 0,
     score: 200
   },
+  //14
   {
     question: 'How many Jan Michael Vincents are there?',
     answers: [
@@ -172,8 +195,10 @@ const questions = [
     ],
     correctIndex: 3,
     fiftyfifty: [1, 3],
+    fiftyIndex: 1,
     score: 200
   },
+  //15
   {
     question: 'What is the name of testicle monster\'s gun?',
     answers: [
@@ -184,8 +209,10 @@ const questions = [
     ],
     correctIndex: 2,
     fiftyfifty: [2, 0],
+    fiftyIndex: 0,
     score: 200
   },
+  //16
   {
     question: 'What cereal is so good, children cut open a Leprechaun to eat it out of his internal organs?',
     answers: [
@@ -195,9 +222,11 @@ const questions = [
       'D: Beatawhix'
     ],
     correctIndex: 1,
-    fiftyfifty: [1, 0],
+    fiftyfifty: [0, 1],
+    fiftyIndex: 1,
     score: 200
   },
+  //17
   {
     question: 'What did Jerry attempt to use as a weapon at Birdperson\'s wedding?',
     answers: [
@@ -208,12 +237,14 @@ const questions = [
     ],
     correctIndex: 1,
     fiftyfifty: [1, 3],
+    fiftyIndex: 0,
     score: 200
   }
 
 
 ];
 
+console.log('this is working');
 
 function shuffle(questionBank) {
   var currentIndex = questionBank.length, temporaryValue, randomIndex;
@@ -235,6 +266,5 @@ function shuffle(questionBank) {
 
 }
 
-// Used like so
 
 const questionBank = shuffle(questions);
