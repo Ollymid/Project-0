@@ -12,9 +12,10 @@
 body {
   height: 900px;
   font-family: arial;
+  background-color: black;
   background-image: url('../assets/spacea.jpg');
-  background-size: cover;
-  background-position: center;
+  // background-size: cover;
+  // background-position: center;
 }
 
 header {
@@ -98,6 +99,9 @@ h3 {
       color: #29e0f3;
       -webkit-text-stroke: 2px #bada55;
     }
+  &.councilofjerks {
+    font-size: 25px;
+  }
 }
 
 p {
@@ -117,6 +121,9 @@ p {
   &.flurbo {
     margin-top: 20px;
     margin-bottom: 15px;
+  }
+  &.jez {
+    margin-bottom: 30px;
   }
   span.red{
     color: #ffffff;
@@ -156,6 +163,19 @@ button {
     height: 150px;
     width: 20%;
     margin: 5px 0;
+  }
+  &.meeseseeksButton {
+    background-color: #63c7ef;
+    color: #fe6f1c;
+    border: 1px solid #fe6f1c;
+    width: 80%;
+  }
+  &.reset-button {
+    width: 40%;
+    background-color: #1ab1a5;
+    color: #a55;
+    border: 1px solid #d11d05;
+
   }
   &.answer {
     width: calc(50% - 3px);
@@ -203,6 +223,7 @@ button {
 button:hover {
   color: black;
   font-size: 19px;
+
   &.start-button {
     border: 5px solid #bada55;
   }
@@ -213,6 +234,9 @@ button:hover {
   &.helper {
     background-color: #23742D;
     border-color: #1d1075;
+  }
+  &.reset-button {
+    background-color: #23742D;
   }
 }
 
@@ -263,6 +287,8 @@ img.image1 {
   bottom: 0;
   width: 25%;
   text-align: center;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
   padding: 5px;
   box-sizing: border-box;
 }

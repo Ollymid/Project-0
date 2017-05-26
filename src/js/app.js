@@ -119,8 +119,7 @@ $(() => {
 
       score += 200;
       $score.text(score);
-      console.log(score);
-      showQuestion();
+      console.log(score); showQuestion();
 
     } else {
       console.log('you died');
@@ -129,6 +128,9 @@ $(() => {
       $gameBoard.addClass('hidden');
       questionIndex = 0;
       score = 0;
+      video.loop = false;
+      video.src = 'src/assets/loser.webm';
+      video.play();
     }
 
   }
@@ -137,9 +139,12 @@ $(() => {
   function helperOne (){
     $phoneFriend.removeClass('hidden');
     $gameBoard.addClass('hidden');
+    video.loop = false;
+    video.src = 'src/assets/meeseek.webm';
+    video.play();
   }
 
-  // function alerts correct answer and then sends user back to gameboard - button disbaled after use
+  // function alerts correct answer and then sends user back to gameboard - button disabled after use
   function mrMeeseeks(){
     const correctAnswer = questionObject.answers[questionObject.correctIndex];
     $phoneFriend.addClass('hidden');
@@ -149,27 +154,24 @@ $(() => {
     score -= 100;
     $score.text(score);
   }
-
+// game board hidden and 50:50 option presented with the question and only two buttons
   function helperTwo(){
 
     $jerrified.removeClass('hidden');
     $gameBoard.addClass('hidden');
 
+    $questionBox.html(questionObject.question);
     $jerry1.html(questionObject.answers[questionObject.fiftyfifty[0]]);
     $jerry2.html(questionObject.answers[questionObject.fiftyfifty[1]]);
-    console.log(questionObject.fiftyfifty[0]);
-    console.log(questionObject.fiftyfifty[1]);
-  }
 
+  }
+// checks the index of the click targets (the jerry buttons) to see if it matches the index of the correct answer
   function checkFiftyFifty (e){
 
     if (questionObject.fiftyIndex === $(e.target).index('button.jerry')){
-      // questionIndex ++;
 
+      // if you pick the correct 50:50 you go back into the game but you get half points
       console.log('you live');
-      console.log(questionObject.correctIndex);
-      console.log($(e.target));
-      console.log($(e.target).index());
       $gameBoard.removeClass('hidden');
       $jerrified.addClass('hidden');
       showQuestion();
@@ -179,11 +181,12 @@ $(() => {
 
     } else {
       console.log('you died');
-      console.log(questionObject.fiftyIndex);
-      console.log($(e.target));
-      console.log($(e.target).index());
+      // if you fail with the 50:50 it is game over
       $gameOver.removeClass('hidden');
       $jerrified.addClass('hidden');
+      audio.loop = false;
+      audio.src = 'src/assets/jerry.mp3';
+      audio.play();
 
       questionIndex = 0;
       score = 0;
