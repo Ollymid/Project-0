@@ -208,6 +208,9 @@ $(() => {
     $gameBoard.addClass('hidden');
     score -= 100;
     $score.text(score);
+    audio.loop = false;
+    audio.src = 'src/assets/holograms.mp3';
+    audio.play();
 
     function generatePercentages() {
       const percentages = [Math.random(), Math.random(), Math.random(), Math.random()];
