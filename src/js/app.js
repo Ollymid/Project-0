@@ -9,7 +9,11 @@ $(() => {
   const $score = $('.score');
   const $highScore = $('.high-score');
   const audio = document.querySelector('audio');
-  const video = document.querySelector('video');
+
+  const $video1 = $('#video1');
+  const $video2 = $('#video2');
+  const $video3 = $('#video3');
+  const $video4 = $('#video4');
 
   const $instructions = $('#start');
   const $wellDone = $('#well-done');
@@ -88,9 +92,9 @@ $(() => {
       audio.loop = false;
       audio.src = 'src/assets/WubbaLubba.mp3';
       audio.play();
-      video.loop = false;
-      video.src = 'src/assets/winner.webm';
-      video.play();
+      $video1.get(0).play();
+      $video1.loop = false;
+      $video1.src = 'src/assets/winner.webm';
       $highScore.text(highScore);
       localStorage.setItem('highScore', highScore);
       // else it carrys on the game
@@ -128,9 +132,9 @@ $(() => {
       $gameBoard.addClass('hidden');
       questionIndex = 0;
       score = 0;
-      video.loop = false;
-      video.src = 'src/assets/loser.webm';
-      video.play();
+      $video2.loop = false;
+      $video2.src = 'src/assets/loser.webm';
+      $video2.get(0).play();
     }
 
   }
@@ -139,9 +143,10 @@ $(() => {
   function helperOne (){
     $phoneFriend.removeClass('hidden');
     $gameBoard.addClass('hidden');
-    video.loop = false;
-    video.src = 'src/assets/meeseek.webm';
-    video.play();
+    $video3.get(0).play();
+    $video3.loop = false;
+    $video3.src = 'src/assets/meeseek.webm';
+
   }
 
   // function alerts correct answer and then sends user back to gameboard - button disabled after use
@@ -159,6 +164,10 @@ $(() => {
 
     $jerrified.removeClass('hidden');
     $gameBoard.addClass('hidden');
+
+    $video4.get(0).play();
+    $video4.loop = false;
+    $video4.src = 'src/assets/twodots.mp4';
 
     $questionBox.html(questionObject.question);
     $jerry1.html(questionObject.answers[questionObject.fiftyfifty[0]]);
@@ -184,6 +193,7 @@ $(() => {
       // if you fail with the 50:50 it is game over
       $gameOver.removeClass('hidden');
       $jerrified.addClass('hidden');
+      $video2.addClass('hidden');
       audio.loop = false;
       audio.src = 'src/assets/jerry.mp3';
       audio.play();

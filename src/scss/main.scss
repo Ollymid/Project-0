@@ -248,6 +248,11 @@ button:focus {
 video {
   height: 400px;
   width: 700px;
+  &#video4 {
+    height: 300px;
+    width: 700px;
+    margin-bottom: 10px;
+  }
 }
 
 .high-score, .score {
