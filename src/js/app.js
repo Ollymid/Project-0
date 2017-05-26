@@ -73,9 +73,11 @@ $(() => {
     $choice1.prop('disabled', false);
     $choice2.prop('disabled', false);
     $choice3.prop('disabled', false);
-    showQuestion();
+  
     shuffle(questionBank);
-
+    highScore = score > highScore ? score : highScore;
+    $highScore.text(highScore);
+    localStorage.setItem('highScore', highScore);
   }
 
   function showQuestion() {
@@ -88,13 +90,14 @@ $(() => {
       $gameBoard.addClass('hidden');
       $wellDone.removeClass('hidden');
       questionIndex = 0;
-      highScore = score > highScore ? score : highScore;
+      $score.text(score);
       audio.loop = false;
       audio.src = 'src/assets/WubbaLubba.mp3';
       audio.play();
       $video1.get(0).play();
       $video1.loop = false;
       $video1.src = 'src/assets/winner.webm';
+      highScore = score > highScore ? score : highScore;
       $highScore.text(highScore);
       localStorage.setItem('highScore', highScore);
       // else it carrys on the game
@@ -123,7 +126,8 @@ $(() => {
 
       score += 200;
       $score.text(score);
-      console.log(score); showQuestion();
+      console.log(score, questionIndex);
+      showQuestion();
 
     } else {
       console.log('you died');

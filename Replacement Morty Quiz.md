@@ -27,13 +27,12 @@ You should add a list of the software and languages used in the project, for exm
 - Gulp
 - NPM
 - Git & Github
-- Heroku
 
 #### Challenges faced
 
 I stored my questions and answers within objects that were transferred using jquery to the answer buttons on the page. The first challenge was to find a means of checking that the button that was clicked was the correct answer.
-The second challenge once this one was overcome was to then again making sure the correct button was checked - and the javascript was doing some funky things - saying that the indexes of the 2 item array were 1 & 2 rather than 0 & 1. This was avoided once the event listener was given more specific information to listen to.
-I also had the issue of randoising the questions, so they appeared in random order. I solved that with a simle fisher-yates shuffler that works well.
+The second challenge once this one was overcome was to then again making sure the correct button was checked - and the javascript was doing some funky things - saying that the indexes of the 2 item array were 1 & 2 rather than 0 & 1. This was avoided once the event listener was given more specific information about which buttons to listen to.
+I also had the issue of randomising the questions, so they appeared in random order. I solved that with a simple fisher-yates shuffler, that works well.
 
 
 #### Final Say
