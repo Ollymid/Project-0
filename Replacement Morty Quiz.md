@@ -40,9 +40,10 @@ I also had the issue of randomising the questions, so they appeared in random or
 
 I have many upgrades I wish to carry out in future:
 
-- Improve the overall styling
-- I want to create a 2 player mode
+- Improve the overall styling.
+- I want to create a 2 player mode.
+- add a timer to the questions.
 - I want to throw in some more Morty Buttons that will help (or hinder) the user with the quiz.
-- I want to include animation of elements
+- I want to include animation of elements.
 
 https://github.com/Ollymid

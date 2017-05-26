@@ -73,7 +73,9 @@ $(() => {
     $choice1.prop('disabled', false);
     $choice2.prop('disabled', false);
     $choice3.prop('disabled', false);
-  
+    $video1.get(0).pause();
+    $video2.get(0).pause();
+
     shuffle(questionBank);
     highScore = score > highScore ? score : highScore;
     $highScore.text(highScore);
@@ -191,16 +193,18 @@ $(() => {
       $choice2.prop('disabled', true);
       score += 100;
       $score.text(score);
+      $video4.get(0).pause();
 
     } else {
       console.log('you died');
       // if you fail with the 50:50 it is game over
       $gameOver.removeClass('hidden');
       $jerrified.addClass('hidden');
-      $video2.addClass('hidden');
+      $video4.addClass('hidden');
       audio.loop = false;
       audio.src = 'src/assets/jerry.mp3';
       audio.play();
+      $video4.get(0).pause();
 
       questionIndex = 0;
       score = 0;
