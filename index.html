@@ -16,15 +16,17 @@
     <h1>Replacement Morty Quiz </h1>
   </header>
   <main>
+    <audio>
+    </audio>
       <div id ="start">
         <h3 class="welcome">Instructions</h3>
         <p class="intro">Hi, Rick here, and welcome A-holes to my new quiz game.<br>
-          I am looking for a replacement Morty after my last one died in an unfortunate accident with mutant bacterial (Pro tip: NEVER clean DNA vials with your spit). <br>Answer these 15 questions correctly you will be considered, and if you match my high-score I will give you <span class="orange">3000 Flurbos!</span>. If you do not, you will be destroyed.
-          I understand you cannot match my scientific genius so I have included <span class="orange"> 3 'Morty' buttons</span> that should help your feeble mind towards the right answer
-          Answer wrong and you will be destroyed...
-
+          I am kinda looking for a replacement Morty after my last one died in an accident with mutant alien bacteria (Pro tip: NEVER clean DNA vials with your spit). <br>Answer these 15 questions correctly you might be considered, and you will collect Flurbos. If you match my  high-score you can keep those <span class="red">3000 Flurbos!</span>.
+          I understand you cannot match my scientific genius so I have included <span class="red"> 3 'Morty' buttons</span> that should help your feeble mind towards the right answer.<br>
+          Answer wrong, the game finishes and you will be destroyed...
         </p>
         <button class="start-button"></button>
+        <p>Flurbo High Score <span class="high-score">0</span></p>
       </div>
 
       <div id="game-board" class="hidden">
@@ -42,36 +44,37 @@
           <button class="helper choice2"></button>
           <button class="helper choice3"></button>
         </div>
-        <p>Score: <span class="score">0</span></p>
+        <p>Flurbos: <span class="score">0</span></p>
       </div>
 
 
       <div id="game-over" class="hidden">
         <h3 class="result">GAME OVER LOSER </h3>
-        <p>Your score is: <span class="score">0</span></p>
+        <p class="flurbo">Your score is: <span class="score">0</span></p>
         <button class="reset-button">New Game</button>
-        <p>Dick Score: <span class="high-score">0</span></p>
+        <p>Flurbo High Score: <span class="high-score">0</span></p>
       </div>
 
       <div id="well-done" class="hidden">
-        <h3 class="result"> CONGRATS </h3>
-        <p>Your score is: <span class="score">0</span></p>
+        <h3 class="result">Congratulations D-Bag</h3>
+        <p class="flurbo">Your total number of Flurbos is: <span class="score">0</span></p>
+        <video src="src/assets/winner.webm" type="video/webm"></video>
         <button class="reset-button">New Game</button>
-        <p>Shit Score: <span class="high-score">0</span></p>
+        <!-- <p> Flurbo High Score: <span class="high-score">0</span></p> -->
       </div>
 
       <div id ="meeseeks-box" class="hidden">
 
         <img class ="can-do" src="https://media.giphy.com/media/DgLsbUL7SG3kI/giphy.gif">
         <button class="meeseseeksButton">CAN DO</button>
-        <p>High Score: <span class="score">0</span></p>
+        <p>Flurbos: <span class="score">0</span></p>
       </div>
 
       <div id ="fifty-fifty" class="hidden">
         <p>You really twisted my arm on this on Jerry, narrowed it down enough for you?</p>
         <button class="jerry" id="choice1"> </button>
         <button class="jerry" id="choice2"> </button>
-        <p>High Score: <span class="score">0</span></p>
+        <p>Flurbos: <span class="score">0</span></p>
       </div>
 
       <div id ="council" class="hidden">
@@ -96,7 +99,7 @@
           <div class="bar"></div>
         </div>
         <button class="collectionofdouches"> Return to Question</button>
-        <p>Score: <span class="score">0</span></p>
+        <p>Flurbos: <span class="score">0</span></p>
       </div>
 
     </main>

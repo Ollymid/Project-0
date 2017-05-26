@@ -32,7 +32,7 @@ const questions = [
   },
    // 3
   {
-    question: 'Who are Rick\'s closest friends and fellow bandates of The Flesh Curtains?',
+    question: 'Who are Rick\'s closest friends and fellow bandmates of The Flesh Curtains?',
     answers: [
       'A: Squirtle and Birdyman',
       'B: Squidgy and Birdbrain ',
@@ -238,6 +238,19 @@ const questions = [
     correctIndex: 1,
     fiftyfifty: [1, 3],
     fiftyIndex: 0,
+    score: 200
+  },
+  {
+    question: 'What does Rick request before having sex with Unity?',
+    answers: [
+      'A: A Hang glider',
+      'B: A crotchless Uncle Sam costume',
+      'C: An entire football field covered end to end with naked redheads',
+      'D: All of these things (A, B & C)'
+    ],
+    correctIndex: 3,
+    fiftyfifty: [1, 3],
+    fiftyIndex: 1,
     score: 200
   }
 

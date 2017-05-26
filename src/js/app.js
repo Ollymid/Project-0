@@ -6,6 +6,10 @@ $(() => {
   const $startButton = $('.start-button');
   const $resetButton = $('.reset-button');
   const $questionBox = $('.currentQ');
+  const $score = $('.score');
+  const $highScore = $('.high-score');
+  const audio = document.querySelector('audio');
+  const video = document.querySelector('video');
 
   const $instructions = $('#start');
   const $wellDone = $('#well-done');
@@ -32,6 +36,11 @@ $(() => {
   const $audienceReturn = $('.collectionofdouches');
   let questionIndex = 0;
   const rightIndex = 0;
+  let score = 0;
+  $score.text(score);
+
+  let highScore = localStorage.getItem('highScore') || 0;
+  $highScore.text(highScore);
 
   let questionObject = null;
 
@@ -42,6 +51,15 @@ $(() => {
     $choice2.prop('disabled', false);
     $choice3.prop('disabled', false);
     showQuestion();
+    audio.loop = false;
+    audio.src = 'src/assets/ShowMeWhatYouGot.mp3';
+    audio.play();
+
+
+    highScore = score > highScore ? score : highScore;
+    $highScore.text(highScore);
+    score = 0;
+    $score.text(score);
   }
 
   function restartGame(){
@@ -66,6 +84,15 @@ $(() => {
       $gameBoard.addClass('hidden');
       $wellDone.removeClass('hidden');
       questionIndex = 0;
+      highScore = score > highScore ? score : highScore;
+      audio.loop = false;
+      audio.src = 'src/assets/WubbaLubba.mp3';
+      audio.play();
+      video.loop = false;
+      video.src = 'src/assets/winner.webm';
+      video.play();
+      $highScore.text(highScore);
+      localStorage.setItem('highScore', highScore);
       // else it carrys on the game
     } else {
       //  adds question property to the question box
@@ -76,6 +103,7 @@ $(() => {
       $button3.html(questionObject.answers[2]);
       $button4.html(questionObject.answers[3]);
       questionIndex ++;
+
     }
   }
 
@@ -89,7 +117,9 @@ $(() => {
     if (questionObject.correctIndex === $(e.target).index()){
       console.log('working!');
 
-
+      score += 200;
+      $score.text(score);
+      console.log(score);
       showQuestion();
 
     } else {
@@ -98,6 +128,7 @@ $(() => {
       $gameOver.removeClass('hidden');
       $gameBoard.addClass('hidden');
       questionIndex = 0;
+      score = 0;
     }
 
   }
@@ -115,6 +146,8 @@ $(() => {
     $gameBoard.removeClass('hidden');
     alert(correctAnswer);
     $choice1.prop('disabled', true);
+    score -= 100;
+    $score.text(score);
   }
 
   function helperTwo(){
@@ -141,6 +174,9 @@ $(() => {
       $jerrified.addClass('hidden');
       showQuestion();
       $choice2.prop('disabled', true);
+      score += 100;
+      $score.text(score);
+
     } else {
       console.log('you died');
       console.log(questionObject.fiftyIndex);
@@ -150,12 +186,15 @@ $(() => {
       $jerrified.addClass('hidden');
 
       questionIndex = 0;
+      score = 0;
     }
   }
 
   function helperThree () {
     $askAudience.removeClass('hidden');
     $gameBoard.addClass('hidden');
+    score -= 100;
+    $score.text(score);
 
     function generatePercentages() {
       const percentages = [Math.random(), Math.random(), Math.random(), Math.random()];
@@ -204,15 +243,18 @@ $(() => {
   // if can do button is clicked - run mr meeseeks function and find out the answer + return to game screen
   $meeseseeksButton.on('click', mrMeeseeks);
 
+
   //if helper2 button(50:50) is clicked run fiftyfifty function
   $choice2.on('click', helperTwo);
   // if fifty fifty button is clicked - run check fifty fifty
   $dumbDown.on('click', checkFiftyFifty);
-  // click of helper three runs ask the audience percentages function
 
+
+  // click of helper three runs ask the audience percentages function
   $choice3.on('click', helperThree);
   // click of auidencereturn button takes user back to game
   $audienceReturn.on('click', returnToGame);
+
 
   // restarts the game and shuffles the questions
   $resetButton.on('click', restartGame);

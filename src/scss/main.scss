@@ -67,7 +67,7 @@ div#start {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  height: 100%;
+  height: 105%;
 
 }
 div#game-board {
@@ -89,6 +89,15 @@ h3 {
       color: #29e0f3;
       -webkit-text-stroke: 2px #bada55;
     }
+    &.result {
+      font-family: 'Eater', cursive;
+      font-size: 50px;
+      margin-bottom: 25px;
+      width: 90%;
+      margin: 0 auto;
+      color: #29e0f3;
+      -webkit-text-stroke: 2px #bada55;
+    }
 }
 
 p {
@@ -105,8 +114,12 @@ p {
     padding-top: 45px;
     font-size: 22px;
   }
-  span.orange {
-    color: orange;
+  &.flurbo {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  span.red{
+    color: #ffffff;
   }
 }
 
@@ -208,7 +221,10 @@ button:focus {
 }
 
 
-
+video {
+  height: 400px;
+  width: 700px;
+}
 
 .high-score, .score {
   font-weight: bold;
