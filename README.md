@@ -45,7 +45,7 @@ The user also collects flurbos (integalactic currency) and if they equal the hig
 
 ### Technologies used
 
-The list of the languages, frameworks, lib used in the project:
+The list of the languages, frameworks etc used in the project:
 
 - HTML5
 - SASS
