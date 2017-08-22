@@ -6,7 +6,7 @@ const questions = [
     question: 'What relationship is Rick to Morty?',
     answers: [
       'A: Creepy uncle',
-      'B: Paedophile captor',
+      'B: Creepy Childminder',
       'C: Son from a Benjamin Button style alternate reality',
       'D: Grandfather'
     ],
@@ -106,7 +106,7 @@ const questions = [
     answers: [
       'A: A Megaseed suppository',
       'B: A Plumbus',
-      'C: An alien dildo',
+      'C: An alien sex toy',
       'D: Tic Tacs'
     ],
     correctIndex: 3,
@@ -134,7 +134,7 @@ const questions = [
     answers: [
       'A: Flooblecrank',
       'B: Gloopadoopanukenukenuclear energy ',
-      'C: Glip glop sperm',
+      'C: Donald Trump\'s Racial Hatred',
       'D: Kalaxian crystals'
     ],
     correctIndex: 0,
@@ -161,9 +161,9 @@ const questions = [
     question: 'Which of these is NOT a Rick catch-phrase?',
     answers: [
       'A: Uh oh! Somersault jump!',
-      'B: Lick, lick, lick my balls!',
+      'B: No jumping in the sewer!',
       'C: Rubber baby buggy bumpers! ',
-      'D: Asssss! Tastes bad'
+      'D: Hit the crack, Jack!'
     ],
     correctIndex: 3,
     fiftyfifty: [3, 0],
