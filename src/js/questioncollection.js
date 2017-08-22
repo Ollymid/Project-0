@@ -6,7 +6,7 @@ const questions = [
     question: 'What relationship is Rick to Morty?',
     answers: [
       'A: Creepy uncle',
-      'B: Creepy Childminder',
+      'B: Creepy Childminder Dude',
       'C: Son from a Benjamin Button style alternate reality',
       'D: Grandfather'
     ],
@@ -77,9 +77,9 @@ const questions = [
     question: 'How many arms does a Gazorpian have?',
     answers: [
       'A: Six',
-      'B: None ',
+      'B: Five ',
       'C: Eight',
-      'D: four'
+      'D: Four'
     ],
     correctIndex: 0,
     fiftyfifty: [1, 0],
@@ -106,7 +106,7 @@ const questions = [
     answers: [
       'A: A Megaseed suppository',
       'B: A Plumbus',
-      'C: An alien sex toy',
+      'C: An alien sexual device',
       'D: Tic Tacs'
     ],
     correctIndex: 3,
@@ -134,7 +134,7 @@ const questions = [
     answers: [
       'A: Flooblecrank',
       'B: Gloopadoopanukenukenuclear energy ',
-      'C: Donald Trump\'s Racial Hatred',
+      'C: Donald Trump\'s arrogance',
       'D: Kalaxian crystals'
     ],
     correctIndex: 0,
@@ -148,7 +148,7 @@ const questions = [
     answers: [
       'A: Scary Dave',
       'B: Scary Brandon',
-      'C:Scary Dustin',
+      'C: Scary Dustin',
       'D: Scary Terry Jnr'
     ],
     correctIndex: 1,
